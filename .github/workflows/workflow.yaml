@@ -8,7 +8,7 @@ on:
       - master
 
 jobs:
-  build_and_push:
+  build-and-push:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout repo
@@ -36,5 +36,5 @@ jobs:
 
     - name: Build the Docker image and push
       run: |
-        docker build . --tag ghcr.io/${{ github.actor }}/tomcat-gradle:latest
-        docker push ghcr.io/${{ github.actor }}/tomcat-gradle:latest
+        docker build . --tag ghcr.io/binozo/tomcat-gradle:latest
+        docker push ghcr.io/binozo/tomcat-gradle:latest
